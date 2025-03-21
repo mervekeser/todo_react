@@ -1,15 +1,14 @@
-import React from "react";
 import { useState } from "react";
 
-export const NewTodoForm: React.FC<{ addTodo: Function }> = (props) => {
+function NewTodoForm(props) {
   const [assigned, setAssigned] = useState("");
   const [description, setDescription] = useState("");
 
-  const assignedChange = (event: any) => {
+  const assignedChange = (event) => {
     setAssigned(event.target.value);
   };
 
-  const descriptionChange = (event: any) => {
+  const descriptionChange = (event) => {
     setDescription(event.target.value);
   };
 
@@ -54,4 +53,6 @@ export const NewTodoForm: React.FC<{ addTodo: Function }> = (props) => {
       </form>
     </div>
   );
-};
+}
+
+export default NewTodoForm;
